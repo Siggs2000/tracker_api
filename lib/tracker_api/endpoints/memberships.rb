@@ -23,7 +23,7 @@ module TrackerApi
       end
 
       def delete(project_id, membership_id)
-        data = client.post("/projects/#{project_id}/memberships/#{membership_id}").body
+        data = client.delete("/projects/#{project_id}/memberships/#{membership_id}").body
       end
     end
   end
