@@ -22,7 +22,7 @@ module TrackerApi
         Resources::ProjectMembership.new({ project_id: project_id }.merge(data))
       end
 
-      def delete(project_id, membership_id)
+      def remove(project_id, membership_id)
         data = client.delete("/projects/#{project_id}/memberships/#{membership_id}").body
       end
     end
